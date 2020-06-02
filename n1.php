@@ -19,7 +19,7 @@ $amount = [];
 $array = [];
 $arrayAssoc = [];
 
-$ArrayFile = file_get_contents($txt);
+
 $s1 = 0;
 $s2 = 0;
 $s3 = 0;
@@ -37,9 +37,9 @@ for ($a = 0; $a < count($array); $a++)
 
 for ($n = 0; $n < strlen($txt); $n++)
 {
-    if($ArrayFile[$n]==='')
+    if($txt[$n]==='')
     {
-        $array[$s1] = substr($ArrayFile, $s2, $n - $s3);
+        $array[$s1] = substr($txt, $s2, $n - $s3);
         $s3 = $n + 1;
         $s1 = $s1 + 1;
     }
